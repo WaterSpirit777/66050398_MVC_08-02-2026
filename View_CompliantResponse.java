@@ -40,7 +40,7 @@ public class View_CompliantResponse {
 
                 String Labelinfo = "";
                 for (int i = 0; i < values.length; i++) {
-                    if (i == 4)
+                    if (i == 4 || i == 5)
                         continue;
                     if (i == 1) {
                         try (BufferedReader br2 = new BufferedReader(new FileReader("CSV/Stalls.csv"))) {
@@ -53,13 +53,6 @@ public class View_CompliantResponse {
                                 }
                             }
                         }
-                    } else if (i == 5) {
-                        boolean b = Boolean.parseBoolean(values[5]);
-                        if (b)
-                            Labelinfo += "ดําเนินการแล้ว";
-                        else
-                            Labelinfo += "รอตรวจสอบ";
-                        Labelinfo += "    ";
                     } else {
                         Labelinfo += values[i];
                         Labelinfo += "    ";
@@ -102,3 +95,4 @@ public class View_CompliantResponse {
         }
     }
 }
+
